@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+if [ "$1" = "restart" ]; then 
+	sudo systemctl restart gunicorn
+	sudo systemctl restart nginx
+elif [ "$1" = "stop" ]; then
+	sudo systemctl stop gunicorn
+	sudo systemctl stop nginx
+elif [ "$1" = "start" ]; then
+	sudo systemctl start gunicorn
+	sudo systemctl start nginx
+fi

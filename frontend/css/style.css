@@ -1,0 +1,83 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0%;
+    padding: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: stretch;
+    background-color: black;
+    width: calc(100% - 6px);
+    color: white;
+    padding: 3px;
+    margin: 0px;
+}
+
+nav>ul {
+    flex-grow: 1;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav>ul>li {
+    list-style: none;
+    margin: 5px;
+    padding: 0px;
+}
+
+nav h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: larger;
+    margin: 0px;
+    padding: 2px;
+}
+
+nav p, nav a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 2px;
+    margin: 0px;
+}
+
+nav>div {
+    display: flex;
+    margin: 1px;
+}
+
+nav>div>button {
+    display: none;
+    background-color: #0000;
+    border: 0px;
+    outline: 0px;
+    align-items: center;
+    padding: 3px;
+    margin: 0px;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 2px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 460px) {
+    nav>div {
+        flex-grow: 1;
+    }
+    nav>div button {
+        display: flex;
+    }
+    nav>ul {
+        display: none;
+    }
+}
+
+/*h1 {color: red;}

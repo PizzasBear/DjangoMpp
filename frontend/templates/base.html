@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- C -->
+        <script src="{% static 'js/framework.js' %}"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <title>{% block title %}Max++{% endblock %}</title>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <nav>
+            <div>
+                <h1>Max++</h1>
+                <button onclick=><img src="{% static 'imgs/menu.png' %}"></button>
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+            </ul>
+            <script text="">
+
+            </script>
+            <ul style="justify-content: flex-end;">
+                {% if user.is_authenticated %}
+                <li><p>{{ user.get_username }}</p></li>
+                <li><a href="/accounts/signout">Sign Out</a></li>
+                {% else %}
+                <li><a href="/accounts/signin">Sign In</a></li>
+                <li><a href="/accounts/signup">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% block content %}
+        <p>Sorry there is no content here.</p>
+        {% endblock %}
+    </body>
+</html>
